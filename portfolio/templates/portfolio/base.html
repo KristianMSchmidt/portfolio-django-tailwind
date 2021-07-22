@@ -1,0 +1,56 @@
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous" />
+        {% tailwind_css %}        
+    </head>
+
+    <body>
+        <!-- page div -->
+        <div class="flex flex-col md:flex-row">
+            <!-- navbar -->
+            <nav class="flex sticky top-0 md:flex-col justify-stretch items-center bg-gray-800 text-white text-center
+                md:h-screen w-full md:w-36 lg:w-40 flex-none z-10">
+                <div class="hidden h-2/6 md:block">
+                    <div class="flex flex-col justify-center h-full">
+                        <p class="font-bold pb-1">Kristian Møller</p>
+                        <p class="font-bold pb-1 text-yellow-500">Schmidt</p>
+                        <p class="text-sm text-gray-400">Available for work</p>
+                    </div>
+                </div>
+                <!-- nav links-->
+                <div class="flex justify-evenly w-full md:flex-col pt-5 lg:pt-0">
+                    <a href="{% url 'home' %}#home" class="pb-5 hover:text-yellow-500 focus:text-white">
+                        Home
+                    </a>
+                    <a href="{% url 'home' %}#about" class="pb-5 hover:text-yellow-500 focus:text-white">
+                        About
+                    </a>
+                    <a href="{% url 'home' %}#skills" class="pb-5 hover:text-yellow-500 focus:text-white">
+                        Skills
+                    </a>
+                    <a href="{% url 'home' %}#projects" class="pb-5 hover:text-yellow-500 focus:text-white">
+                        Projects
+                    </a>
+                    <a href="{% url 'home' %}#contact" class="pb-5 hover:text-yellow-500 focus:text-white">
+                        Contact
+                    </a>
+                </div>
+            </nav>
+            <main class="flex-grow">{% block content %} {% endblock %}</main>
+
+        </div> <!-- end of page div -->
+
+</body>
+
+</html>
+

@@ -1,0 +1,15 @@
+<div class="relative {{ project.bg_color }} text-black h-60 py-5 px-5 flex flex-col justify-center
+                        items-center" 
+                        onmouseover="over('{{ project.urlname }}')">
+
+    <h1 class="text-3xl font-bold">{{ project.title|upper }}</h1>
+    <h3 class="text-xl font-heavy">{{ project.subtitle|upper }}</h3>
+
+    <div id="{{ project.urlname  }}"
+        class="bg-gray-900 absolute w-full h-full hidden opacity-90 flex-col items-center justify-center"
+        onmouseout="out(this)">
+        <h4 class="text-white font-heavy pb-2">{{ project.title }}</h4>
+        <a href="{{ project.urlname }}" class="text-yellow-600 hover:text-yellow-400 focus:text-yellow-200">
+            More Info</a>
+    </div>
+</div>

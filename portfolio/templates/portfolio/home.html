@@ -1,0 +1,292 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+
+<script>
+    function over(project) {
+        if (matchMedia('(pointer:fine)').matches) {
+        // Device has a mouse
+        document.getElementById(project).classList.remove("hidden");
+        document.getElementById(project).classList.add("flex");
+        }
+        else{
+            // Devise has no mouse
+            window.location.href = "/" +  project;
+        }
+        
+    }
+    function out(element) {
+        console.log(element)
+        element.classList.add("hidden");
+        element
+            .classList.remove("flex");
+    }
+</script>
+
+<!-- Home -->
+<div class="h-screen bg-gray-700 flex flex-col justify-around lg:justify-center items-center" id="home">
+    <div class="flex flex-col justify-center items-center text-center px-10">
+        <h1 class="text-5xl text-white">Kristian <span class="text-yellow-600">Møller
+                Schmidt</span>
+        </h1>
+        <div class="flex flex-col sm:flex-row justify-center items-center">
+            <a href="https://github.com/KristianMSchmidt" class="text-white m-1">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kristian-m%C3%B8ller-schmidt-516b9170/" class="text-white m-1 mr-3">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <h3 class="text-2xl text-gray-50"> Developer & Mathematician</h3>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<div id="about" class="mb-10 md:mb-0"></div>
+<div
+    class="min-h-screen bg-white text-gray-800 px-8 sm:px-14 md:pr-20 lg:pl-20 lg:pr-10 xl:px-20  2xl:px-40 py-12 lg:flex">
+    <div class="lg:w-3/12">
+        <h1 class="text-4xl font-bold ">About me</h1>
+        <h3>The short version</h3>
+    </div>
+    <div class="lg:w-9/12 lg:px-10 pt-8 lg:pt-20">
+        <h3 class="text-yellow-600 text-xl pb-2 font-heavy">Who am I?</h3>
+        <h2 class="text-2xl font-semibold text-gray-900 pb-3">
+            I'm Kristian Møller Schmidt, a self-taught
+            developer and a trained mathematician</h2>
+        <p class="border-b boder-gray-900 pb-5 text-lg">
+            I'm a self-taught software developer with a university background in mathematics and comparative literature. I enjoy various kinds of
+            coding, from nerdy computer science stuff like algorithms and machine learning to practical web development, front end and back end.  
+            <br><br>
+            Check out some of my projects, and feel free to send me an email if you'd like to work together.
+        </p>
+        <div class="bg-gray-300"></div>
+        <div class="flex flex-wrap">
+            <div class="flex pr-8 py-2">
+                <p class="text-gray-900 font-heavy pr-3">Name: </p>
+                <p class="text-yellow-600">Kristian Møller Schmidt</p>
+            </div>
+
+            <div class="flex pr-8 py-2">
+                <p class="text-gray-900 font-heavy pr-3">From: </p>
+                <p class="text-yellow-600">Copenhagen, Denmark</p>
+            </div>
+            <div class="flex py-2">
+                <p class="text-gray-900 font-heavy pr-3">Email: </p>
+                <p class="text-yellow-600">kmollerschmidt@gmail.com</p>
+            </div>
+        </div>
+        <div class="space-x-4">
+            <a href="{% static 'CV2021.pdf' %}" download
+                class="inline-block mt-4 px-5 py-2 text-sm text-yellow-50 hover:text-yellow-900 bg-yellow-500 rounded-full hover:bg-yellow-300 transition ease-in duration-300s ">
+                Download resume
+            </a>
+            <a href="#projects" class="inline-block mt-4 px-5 py-2 text-sm border text-gray-700 hover:text-white border-gray-700
+                                bg-white hover:bg-gray-700 rounded-full transition ease-in duration-300 ">
+                My work
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Skills-->
+<div id="skills" class="mb-10 md:mb-0"></div>
+<div class="min-h-screen bg-gray-100 text-gray-900 px-8 sm:px-14 md:px-20 2xl:px-40 py-12">
+    <h1 class="text-4xl font-bold pb-3 ">My skills</h1>
+
+    <p> I build full stack web applications and backend algorithms using tools such as Python, Django, Flask,
+        PHP, SQL, Javascript, HTML, CSS, Sass, Bootstrap, Tailwind CSS and Docker.</br>Below, I
+        hightlight my key technical skills that I will bring to your project.
+    </p>
+    <div class="mt-8 grid lg:grid-cols-2 xl:grid-cols-3 gap-10">
+        {% include 'portfolio/skill.html' with skill=skills.python only %}
+        {% include 'portfolio/skill.html' with skill=skills.django only %}
+        {% include 'portfolio/skill.html' with skill=skills.php only %}
+        {% include 'portfolio/skill.html' with skill=skills.frontend only %}
+        {% include 'portfolio/skill.html' with skill=skills.database only %}
+        {% include 'portfolio/skill.html' with skill=skills.tailwind only %}
+        {% include 'portfolio/skill.html' with skill=skills.numpy only %}
+    </div>
+</div>
+
+<!-- Projects-->
+<div id="projects" class="mb-10 md:mb-0"></div>
+<div class="bg-white text-gray-800 px-8 sm:px-14 lg:px-20 2xl:px-40 pt-12 pb-20">
+    <h1 class="text-4xl font-bold">Projects</h1>
+    
+    <!-- Full stack webb applications -->
+    <h2 class="text-3xl font-heavy pt-4 pb-1">Full stack web apps</h2>
+    <p class="pb-3">
+        I built these projects from the
+        ground up to demonstrate skills in front end, back end, security and database
+        development. These projects are full stack web projects that are built so that you can demo them
+        easily. Contact me to get a complete code walkthrough.
+    </p>
+    <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 text-center
+                        place-content-between">
+        {% include 'portfolio/project.html' with project=projects.bugtracker only %}
+        {% include 'portfolio/project.html' with project=projects.portfolio only %}
+    </div>
+
+    <!-- Games & algorithms -->
+    <h2 class="text-3xl font-heavy pt-10 pb-1">Games & algorithms</h2>
+    <p class="pb-3">
+        I like to solve interesting problems using appropriate algorithms and
+        datastructures. Games are a nice playground for stuff like this.
+        Here are three well known games and puzzles that you can play yourself or choose to let an AI agent
+        play for you.
+        I originally made a backend for all three AI-agents as part of the MicroMasters Program
+        in Artificial Intelligence at Columbia University (online
+        education). I've later fine-tuned the algorithms, coded up a web app for each game and
+        made it possible for humans to play too.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 text-center
+                        place-content-between">
+        {% include 'portfolio/project.html' with project=projects.twentyfortyeight only %}
+        {% include 'portfolio/project.html' with project=projects.eightpuzzle only %}
+        {% include 'portfolio/project.html' with project=projects.sudoku only %}
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="mb-12" id="contact"></div>
+<div class="bg-gray-200 text-gray-900 px-8 sm:px-14 lg:px-20 2xl:px-40 py-12">
+    <h1 class="text-4xl font-bold pb-1">Get in touch</h1>
+    <p class="pb-10">Feel free to contact me anytime</p>
+
+    <!-- Show potential message -->
+
+    {% if email_status == 'success' %}
+        <div class="bg-green-200 text-green-800 px-4 py-2 mb-5">
+            Your message was send. I'll reply as soon as possible. 
+        </div>
+    {% elif email_status == 'failure' %}
+        <div class="bg-red-200 text-red-800 px-4 py-2 mb-5">
+            Your message was not send. Try again or send a regular email to the address shown below.
+        </div>
+    {% endif %}
+
+
+    <!-- Customized form -->
+    <!-- {{ form }} eller crispy forms ville selvfølgelig være hurtigere -->
+    <!-- Hvis alle input felterne var styled på samme måder, kunne jeg også loope over dem-->
+    <!-- Se django dox for alle de måder, man kan customize forms på -->
+    <!-- Turn off client side validation by adding novalidate to form -->
+
+    <form action="/#contact" method="post" novalidate>
+
+        {% csrf_token %}
+
+        {{ form.non_field_errors }}
+
+        <!--- Send email form -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+            <!-- Name Input Field  -->
+            <div>
+                <div class="bg-white py-1 flex">
+                    <label for=" {{ form.name.id_for_label }}">
+                        <p class="text-gray-400 pl-1 pr-2"> {{ form.name.label }}</p>
+                    </label>
+                    {{ form.name }}
+                </div>
+                {% if form.name.errors %}
+                    <ol>
+                        {% for error in form.name.errors %}
+                            <li class="text-red-500">{{ error|escape }}</li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
+            </div>
+
+            <!-- Email Input Field  -->
+            <div>
+                <div class="bg-white py-1 flex  ">
+                    <label for=" {{ form.sender.id_for_label }}">
+                        <p class="text-gray-400 pl-1 pr-2"> {{ form.sender.label }}</p>
+                    </label>
+                    {{ form.sender }}
+                </div>
+                {% if form.sender.errors %}
+                    <ol>
+                        {% for error in form.sender.errors %}
+                            <li class="text-red-500">{{ error|escape }}</li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
+            </div>
+
+            <!-- Subject Input Field  -->
+            <div class="lg:col-span-2">
+                <div class="bg-white py-1 flex  ">
+                    <label for=" {{ form.subject.id_for_label }}">
+                        <p class="text-gray-400 pl-1 pr-2"> {{ form.subject.label }}</p>
+                    </label>
+                    {{ form.subject }}
+                </div>
+                {% if form.subject.errors %}
+                    <ol>
+                        {% for error in form.subject.errors %}
+                            <li class="text-red-500">{{ error|escape }}</li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
+           </div>
+
+            <!-- Message input field-->
+            <div class="lg:col-span-2">
+                <div class="bg-white py-1">
+                    <label for=" {{ form.message.id_for_label }}">
+                        <p class="text-gray-400 pl-1 pr-2"> {{ form.message.label }}</p>
+                    </label>
+                    {{ form.message }}
+                </div>
+                {% if form.message.errors %}
+                    <ol>
+                        {% for error in form.message.errors %}
+                            <li class="text-red-500">{{ error|escape }}</li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
+            </div>
+        </div>
+        <button type="submit" class=" text-yellow-50 hover:text-yellow-900 bg-yellow-500 hover:bg-yellow-300 focus:
+                            rounded-full py-2 px-5 mt-4 focus:outline-none focus:ring-2 focus:ring-yellow-900">
+            Send Message
+        </button>
+
+    </form>
+</div>
+
+<!-- Footer -->
+<!-- Icons are from HeroIcons.com-->
+<div class="flex flex-col lg:flex-row justify-around  bg-gray-800 text-white py-20">
+    <div class="flex flex-col items-center pb-6 lg:pb-0">
+        <svg class="w-10 pb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <p>+45 31698820</p>
+    </div>
+
+    <div class="flex flex-col items-center pb-6 lg:pb-0">
+        <svg class="w-10 pb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+        </svg>
+        <p> kmollerschmidt@gmail.com</p>
+
+    </div>
+
+    <div class="flex flex-col items-center text-center">
+        <svg class=" w-10 pb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+        <p>Engblommevej 39 1.th. <br class="sm:hidden"> 2400 Copenhagen </p>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,7 @@
+__pycache__/
+scp.sh
+noter.txt
+.env
+db.sqlite3
+staticfiles
+pipelines.txt
