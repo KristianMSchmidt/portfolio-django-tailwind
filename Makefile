@@ -2,13 +2,13 @@
 runserver:
 	pipenv run python manage.py runserver
 
-# Run productino server locally
+# Run production server locally
 gunicorn:
 	gunicorn config.wsgi --log-file-
 
 # Deploy on Linode with Gunicorn
 check-deploy:
-	pipenv run python manage.py check --deploy
+	heroku run python manage.py check--deploy
 
 # Run test suite
 test:
@@ -29,5 +29,9 @@ migrations:
 # migrate
 migrate:
 	pipenv run python manage.py migrate
+
+make push-heroku:
+	pipenv run python manage.py tailwind build
+	git push heroku master
 
 # pipenv install package --pre (because of black in prelease)
