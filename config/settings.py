@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'tailwind',
+    'fontawesome-free',
+
 
     # local apps
     'theme',

@@ -7,7 +7,7 @@ context = {
                 "to neural networks and backend development. You'll see examples of my work in Python "
                 "in the projects section and on my github profile."
             ),
-            "img": {"width": "120", "url": "img/python_logo.png"},
+            "img": {"width": "120", "height":"120", "url": "img/120px-Python-logo-notext.png"},
         },
         "django": {
             "title": "Full stack web development",

@@ -11,8 +11,12 @@ whitenoise = "==5.1.0"
 gunicorn = "==19.9.0"
 psycopg2-binary = "~=2.8.5"
 black = "*"
+fontawesome-free = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true

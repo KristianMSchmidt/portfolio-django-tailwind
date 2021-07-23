@@ -30,3 +30,4 @@ migrations:
 migrate:
 	pipenv run python manage.py migrate
 
+# pipenv install package --pre (because of black in prelease)
