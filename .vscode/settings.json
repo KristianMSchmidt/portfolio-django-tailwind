@@ -1,4 +1,10 @@
 {
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/kristian/.local/bin/black",
+    "editor.formatOnSave": true,
+    "[python]": {
+    "editor.formatOnSave": false,
+   },
     "files.associations": {
     "**/*.html": "html",
      "**/templates/**/*.html": "django-html",

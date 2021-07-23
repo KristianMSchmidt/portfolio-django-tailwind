@@ -10,9 +10,9 @@ environs = {version = "==8.0.0", extras = ["django"]}
 whitenoise = "==5.1.0"
 gunicorn = "==19.9.0"
 psycopg2-binary = "~=2.8.5"
+black = "*"
 
 [dev-packages]
-autopep8 = "*"
 
 [requires]
 python_version = "3.9"
