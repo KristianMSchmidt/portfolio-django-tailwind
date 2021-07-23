@@ -2,6 +2,10 @@
 runserver:
 	pipenv run python manage.py runserver
 
+# Run productino server locally
+gunicorn:
+	gunicorn config.wsgi --log-file-
+
 # Deploy on Linode with Gunicorn
 check-deploy:
 	pipenv run python manage.py check --deploy
