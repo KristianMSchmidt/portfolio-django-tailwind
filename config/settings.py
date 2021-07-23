@@ -85,6 +85,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# Use sqlite in local development
 DATABASES = {
    'default': env.dj_db_url("DATABASE_URL")
 }
@@ -138,4 +139,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Redirect in production, but not in local development
-SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default = True)
+SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=True)

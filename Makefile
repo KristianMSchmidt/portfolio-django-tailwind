@@ -18,3 +18,11 @@ tailwind-start:
 tailwind-build:
 	pipenv run python manage.py tailwind build
 
+# makemigrations
+migrations:
+	pipenv run python manage.py makemigrations
+
+# migrate
+migrate:
+	pipenv run python manage.py migrate
+
