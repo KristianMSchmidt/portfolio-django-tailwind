@@ -3,13 +3,8 @@ runserver:
 	pipenv run python manage.py runserver
 
 # Deploy on Linode with Gunicorn
-deploy:
-	pipenv clean
-	pipenv sync
-	pipenv run python manage.py collectstatic --noinput
-	pipenv run python manage.py migrate
-	pipenv run python ~/repos/portfolio-django-tailwind-linode/manage.py check --deploy
-	pipenv run gunicorn config.wsgi -b 0.0.0.0:8000
+check-deploy:
+	pipenv run python manage.py check --deploy
 
 # Run test suite
 test:
