@@ -57,7 +57,7 @@ context = {
                 "Matplotlib, Pandas, Tensorplow and Pytorch. These projects are from before I started "
                 "doing web development, so you won't find live applications here. But the code is available on GitHub."
             ),
-            "img": {"width": "200", "url": "img/NumPy_logo.svg"},
+            "img": {"width": "200", "url": "img/numpy.png"},
         },
     },
     "projects": {

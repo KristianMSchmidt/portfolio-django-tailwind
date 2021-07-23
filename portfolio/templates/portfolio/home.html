@@ -1,25 +1,21 @@
 {% extends "portfolio/base.html" %}
 {% load static %}
-{% block content %}
 
+{% block content %}
 <script>
     function over(project) {
         if (matchMedia('(pointer:fine)').matches) {
-        // Device has a mouse
-        document.getElementById(project).classList.remove("hidden");
-        document.getElementById(project).classList.add("flex");
-        }
-        else{
+            // Device has a mouse
+            document.getElementById(project).classList.remove("hidden");
+            document.getElementById(project).classList.add("flex");
+        } else {
             // Devise has no mouse
-            window.location.href = "/" +  project;
+            window.location.href = "/" + project;
         }
-        
     }
     function out(element) {
-        console.log(element)
         element.classList.add("hidden");
-        element
-            .classList.remove("flex");
+        element.classList.remove("flex");
     }
 </script>
 
@@ -31,12 +27,14 @@
         </h1>
         
         <div class="flex flex-col sm:flex-row justify-center items-center">
-            <a href="https://github.com/KristianMSchmidt" class="text-white m-1">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/kristian-m%C3%B8ller-schmidt-516b9170/" class="text-white m-1 mr-3">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a> 
+            <div class="flex">
+                <a href="https://github.com/KristianMSchmidt" class="text-white m-1">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kristian-m%C3%B8ller-schmidt-516b9170/" class="text-white m-1 mr-3">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
             <h3 class="text-2xl text-gray-50"> Developer & Mathematician</h3>
         </div>
     </div>
