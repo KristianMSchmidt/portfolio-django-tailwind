@@ -2,13 +2,13 @@
 runserver:
 	pipenv run python manage.py runserver
 
-# Run production server locally
+# Run production server
 gunicorn:
-	gunicorn config.wsgi --log-file-
+	pipenv run gunicorn config.wsgi --log-file-
 
-# Deploy on Linode with Gunicorn
+# Deployment checklist
 check-deploy:
-	heroku run python manage.py check--deploy
+	heroku run python manage.py check --deploy
 
 # Run test suite
 test:
