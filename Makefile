@@ -7,7 +7,7 @@ gunicorn:
 	pipenv run gunicorn config.wsgi --log-file-
 
 # Deployment checklist
-check-deploy:
+checksecurity:
 	heroku run python manage.py check --deploy
 
 # Run test suite
@@ -30,6 +30,7 @@ migrations:
 migrate:
 	pipenv run python manage.py migrate
 
+# build production tailwind css and push master branch to heroku
 make push-heroku:
 	pipenv run python manage.py tailwind build
 	git push heroku master
