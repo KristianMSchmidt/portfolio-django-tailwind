@@ -2,11 +2,11 @@
 runserver:
 	pipenv run python manage.py runserver
 
-# Run production server
+# Run production server locally
 gunicorn:
 	pipenv run gunicorn config.wsgi --log-file-
 
-# Deployment checklist
+# Deployment checklist 
 checksecurity:
 	heroku run python manage.py check --deploy
 
