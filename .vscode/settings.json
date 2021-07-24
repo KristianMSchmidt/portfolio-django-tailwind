@@ -1,10 +1,7 @@
 {
-    "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/home/kristian/.local/bin/black",
+    "workbench.settings.editor": "json",
     "editor.formatOnSave": true,
-    "[python]": {
-    "editor.formatOnSave": false,
-   },
+    "editor.formatOnPaste":true,
     "files.associations": {
     "**/*.html": "html",
      "**/templates/**/*.html": "django-html",
