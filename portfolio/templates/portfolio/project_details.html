@@ -6,6 +6,9 @@
 <div class="w-full h-screen flex align-middle justify-center py-6 md:pt-12">
     <div class="text-gray-800 lg:py mt-10 px-6 sm:px-20 sm:mt-12 md:max-w-screen-md">
         <h2 class="text-2xl font-bold mb-3"> {{ title }} </h2>
+        {% if urlname == 'bugtracker_django' %}
+            <p class="bg-red-400 mb-4 p-2 text-red-50">NB: This project is still under development</p>
+        {% endif %}
         <p class="text-sm sm:text-base mb-4"> 
             {{ description }}
         </p>

@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "tailwind",
-    "fontawesome-free",
     # local apps
     "theme",
     "portfolio",
@@ -129,8 +128,8 @@ USE_TZ = True
 STATIC_URL = "/static/"
 # STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))] #
 STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
-#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
