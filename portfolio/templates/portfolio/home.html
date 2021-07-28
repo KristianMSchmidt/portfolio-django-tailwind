@@ -17,6 +17,7 @@
         element.classList.add("hidden");
         element.classList.remove("flex");
     }
+
 </script>
 
 <!-- Home -->
@@ -25,6 +26,9 @@
         <h1 class="text-5xl text-white">Kristian <span class="text-yellow-600">Møller
                 Schmidt</span>
         </h1>
+
+
+
         
         <div class="flex flex-col sm:flex-row justify-center items-center">
             <div class="flex">
@@ -62,7 +66,7 @@
         <div class="bg-gray-300"></div>
         <div class="flex flex-wrap">
             <div class="flex pr-8 py-2">
-                <p class="text-gray-900 font-heavy pr-3">Name: </p>
+            <p class="text-gray-900 font-heavy pr-3">Name: </p>
                 <p class="text-yellow-600">Kristian Møller Schmidt</p>
             </div>
 
@@ -89,7 +93,8 @@
 </div>
 
 <!-- Skills-->
-<div id="skills" class="mb-10 md:mb-0"></div>
+<div id="skills" class="mb-10 md:mb-0">
+</div>
 <div class="min-h-screen bg-gray-100 text-gray-900 px-8 sm:px-14 md:px-20 2xl:px-40 py-12">
     <h1 class="text-4xl font-bold pb-3 ">My skills</h1>
 
@@ -123,8 +128,10 @@
     </p>
     <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 text-center
                         place-content-between">
-        {% include 'portfolio/project.html' with project=projects.bugtracker only %}
+        {% include 'portfolio/project.html' with project=projects.bugtracker_php only %}
         {% include 'portfolio/project.html' with project=projects.portfolio only %}
+        {% include 'portfolio/project.html' with project=projects.bugtracker_django only %}
+
     </div>
 
     <!-- Games & algorithms -->

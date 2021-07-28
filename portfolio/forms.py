@@ -14,3 +14,14 @@ class ContactForm(forms.Form):
     message.widget.attrs.update(
         {"class": "h-32 lg:h-20 border-none flex-grow w-full px-2 w-full"}
     )
+
+
+class XXX():
+    name = 4
+
+    sex = "femals"
+
+
+class yyy():
+
+    pass

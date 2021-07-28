@@ -30,9 +30,10 @@ migrations:
 migrate:
 	pipenv run python manage.py migrate
 
-# build production tailwind css and push master branch to heroku
+# build production tailwind css & push master branch to heroku & check security
 make push-heroku:
 	pipenv run python manage.py tailwind build
 	git push heroku master
+	heroku run python manage.py check --deploy
 
 # pipenv install package --pre (because of black in prelease)

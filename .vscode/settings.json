@@ -1,21 +1,4 @@
 {
-    "workbench.settings.editor": "json",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste":true,
-    "files.associations": {
-    "**/*.html": "html",
-     "**/templates/**/*.html": "django-html",
-    "**/templates/**/*": "django-txt",
-    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
-    },
-    "emmet.includeLanguages": {
-   "django-html": "html"
-},
-    "beautify.language": {
-    "html": [
-        "htm",
-        "html",
-        "django-html"
-    ]
-},
+    "editor.formatOnSaveMode": "file",
+     
 }

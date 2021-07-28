@@ -20,6 +20,9 @@ class HomeViewTest(TestCase):
         Sending valid message will generate new object in mail database and redirect user back home.
         """
         post = {
+
+
+
             "name": "Bob",
             "sender": "bob@mail.dk",
             "subject": "some subject",
