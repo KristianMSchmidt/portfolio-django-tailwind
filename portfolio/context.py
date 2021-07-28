@@ -7,11 +7,7 @@ context = {
                 "to neural networks and backend development. You'll see examples of my work in Python "
                 "in the projects section and on my github profile."
             ),
-            "img": {
-                "width": "120",
-                "height": "120",
-                "url": "img/120px-Python-logo-notext.png",
-            },
+            "img": {"width": "120", "url": "img/python_logo.png"},
         },
         "django": {
             "title": "Full stack web development",
@@ -61,72 +57,47 @@ context = {
                 "Matplotlib, Pandas, Tensorplow and Pytorch. These projects are from before I started "
                 "doing web development, so you won't find live applications here. But the code is available on GitHub."
             ),
-            "img": {"width": "200", "url": "img/numpy.png"},
+            "img": {"width": "200", "url": "img/NumPy_logo.svg"},
         },
     },
     "projects": {
-        "bugtracker_php": {
-            "title": "Bug Tracker - PHP",
+        "bugtracker": {
+            "title": "Bug Tracker",
             "subtitle": "A ticket tracking system",
-            "bg_color": "bg-red-200",
-            "category": "Web Application",
-            "urlname": "bugtracker_php",
+            "bg_color": "bg-blue-200",
+            "urlname": "bugtracker",
             "github_url": "https://github.com/KristianMSchmidt/bug_tracker",
             "external_url": "https://www.kristianmschmidt.com/bugtracker/view/pages/demo_login.php",
-            "stack": "PHP, SQL, JavaScript, CSS, Sass, HTML",
+            "stack": "PHP, SQL, JS, CSS, Sass, HTML",
             "deployment": "Hostinger",
-            "description": (
-                "This is a ticket tracking system that could be used by e.g. a sofware company to "
-                "keep track of reported bugs and issues related to their software. The program features "
-                "authorization and authentication, multi-role demo-login and an automated notification system. "
-                "I've built this project from scratch, including relational database design and a responsive "
-                "front end. The back end is built with (object-oriented) PHP, raw SQL and a MySql-database. "
-                "The front end is built with vanilla HTML, CSS, Sass and JavaScript. "
-                "If you only visit once, I recommend that you log in as 'Demo Admin'."
-
-            ),
-        },
-        "portfolio": {
-            "title": "This Portfolio",
-            "subtitle": "What you see right now",
-            "bg_color": "bg-blue-100",
-            "category": "Web Application",
-            "category": "Website",
-            "urlname": "portfolio",
-            "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind-linode",
-            "external_url": "/",
-            "stack": "Django, Python, HTML, JavaScript, Tailwind CSS",
-            "deployment": "Heroku",
-            "description": (
-                "I've styled this Portfolio with Tailwind CSS. I use Django to include template components and to set up the email backend system. "
-            ),
-        },
-        "bugtracker_django": {
-            "title": "Bug Tracker - Django",
-            "subtitle": "A ticket tracking system",
-            "bg_color": "bg-pink-200",
-            "category": "Web Application",
-            "urlname": "bugtracker_django",
-            "github_url": "https://github.com/KristianMSchmidt/django-bugtracker",
-            "external_url": "https://django-bugtracker.herokuapp.com/",
-            "stack": "Django, Python, JavaScript, HTML, Bootstrap, htmx, Docker",
-            "deployment": "Heroku (Docker)",
             "description": (
                 "This is a ticket tracking system that could be used by e.g. a sofware company to keep track of "
                 "reported bugs and issues related to their software. The program features authorization and authentication, "
                 "multi-role demo-login and an automated notification system. I've built this project from scratch, "
                 "including relational database design and a responsive front end. "
-                "The back end is built Django and Python. The front end is built with "
-                "vanilla HTML, htmx, CSS, Bootstrap and JavaScript. The implementation features throughout unit testing, pagination, CRUD-operations, a postgresql database with "
-                "One-One, One-To-Many and Many-To-Many relations, password reset via email, search functionality and much more. "
+                "The back end is built with (object-oriented) PHP, raw SQL and a MySql-database. The front end is built with "
+                "vanilla HTML, CSS and JS. "
                 "If you only visit once, I recommend that you log in as 'Demo Admin'."
+            ),
+        },
+        "portfolio": {
+            "title": "This Portfolio",
+            "subtitle": "What you see right now",
+            "bg_color": "bg-red-100",
+            "urlname": "portfolio",
+            "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind-linode",
+            "external_url": "/",
+            "stack": "Django, Python, HTML, JavaScript, Tailwind CSS, MailGun",
+            "deployment": "Linode Linux server (IaaS)",
+            "description": (
+                "I've styled this with Tailwind CSS. I use Django to include template components and to set up the email backend system. "
+                "The site is deployed on a virtual linux machine, where I've set up a Gunicorn server, SSL-certificates etc."
             ),
         },
         "twentyfortyeight": {
             "title": "2048 Game",
             "subtitle": "Strong AI player",
             "bg_color": "bg-yellow-100",
-            "category": "Web Application",
             "urlname": "twentyfortyeight",
             "github_url": "https://github.com/KristianMSchmidt/2048-game-",
             "external_url": "https://kristianmschmidt.pythonanywhere.com/twentyfortyeight",
@@ -147,7 +118,6 @@ context = {
             "title": "8-puzzle solver",
             "subtitle": "Compare solution algorithms",
             "bg_color": "bg-green-100",
-            "category": "Web Application",
             "urlname": "eightpuzzle",
             "github_url": "https://github.com/KristianMSchmidt/flask-8-puzzle",
             "external_url": "https://kristianmschmidt.pythonanywhere.com/puzzle",
@@ -168,7 +138,6 @@ context = {
             "title": "Sudoku Solver",
             "subtitle": "Blazingly fast",
             "bg_color": "bg-purple-100",
-            "category": "Web Application",
             "urlname": "sudoku",
             "github_url": "https://github.com/KristianMSchmidt/Sudoku-solver-Flask-web-app-",
             "external_url": "https://kristianmschmidt.pythonanywhere.com/sudoku",
