@@ -116,7 +116,7 @@ context = {
                 "reported bugs and issues related to their software. The program features authorization and authentication, "
                 "multi-role demo-login and an automated notification system. I've built this project from scratch, "
                 "including relational database design and a responsive front end. "
-                "The back end is built Django and Python. The front end is built with "
+                "The back end is built with Django and Python. The front end is built with "
                 "vanilla HTML, htmx, CSS, Bootstrap and JavaScript. The implementation features throughout unit testing, pagination, CRUD-operations, a postgresql database with "
                 "One-One, One-To-Many and Many-To-Many relations, password reset via email, search functionality and much more. "
                 "If you only visit once, I recommend that you log in as 'Demo Admin'."
