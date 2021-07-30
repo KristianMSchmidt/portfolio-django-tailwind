@@ -90,17 +90,16 @@ context = {
             "title": "This Portfolio",
             "subtitle": "What you see right now",
             "bg_color": "bg-blue-100",
-            "category": "Web Application",
-            "category": "Website",
+            "category": "Web Application (Single-page)",
             "urlname": "portfolio",
             "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind-linode",
             "external_url": "/",
             "stack": "Django, Python, JavaScript, Tailwind CSS, HTML",
             "deployment": "Heroku",
             "description": (
-                "I've used Django for this project to include re-usable components and to set up the email backend. "
-                "Using vanilla Javascript, I've implemented this website as a single-page application. "
-                "The nice styling is done with Tailwind CSS. "
+                "I've used Django in this project to include re-usable components and to set up the email backend. "
+                "The portfolio is built as a single-page application using Javascript. "
+                "I've made the styling and reponsive layout using Tailwind CSS. "
             ),
         },
         "bugtracker_django": {
