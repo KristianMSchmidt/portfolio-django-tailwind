@@ -51,8 +51,7 @@ module.exports = {
 
         /** In this particular project I have Tailwind CSS classes in the file context.py **/
         '../../portfolio/context.py',
-        '../../portfolio/forms.py'
-
+        '../../portfolio/forms.py',
 
     ],
     darkMode: false, // or 'media' or 'class'

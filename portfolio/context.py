@@ -95,10 +95,12 @@ context = {
             "urlname": "portfolio",
             "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind-linode",
             "external_url": "/",
-            "stack": "Django, Python, HTML, JavaScript, Tailwind CSS",
+            "stack": "Django, Python, JavaScript, Tailwind CSS, HTML",
             "deployment": "Heroku",
             "description": (
-                "I've styled this Portfolio with Tailwind CSS. I use Django to include template components and to set up the email backend system. "
+                "I've used Django for this project to include re-usable components and to set up the email backend. "
+                "Using vanilla Javascript, I've implemented this website as a single-page application. "
+                "The nice styling is done with Tailwind CSS. "
             ),
         },
         "bugtracker_django": {

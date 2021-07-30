@@ -35,11 +35,3 @@ def home_view(request):
     context['form'] = form
 
     return render(request, 'portfolio/home.html', context)
-
-
-def project_detail_view(request, projectname):
-    try:
-        context = ctx['projects'][projectname]
-    except:
-        raise Http404("No project with this name")
-    return render(request, 'portfolio/project_details.html', context)

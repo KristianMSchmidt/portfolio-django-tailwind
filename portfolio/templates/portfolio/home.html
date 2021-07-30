@@ -2,34 +2,14 @@
 {% load static %}
 
 {% block content %}
-<script>
-    function over(project) {
-        if (matchMedia('(pointer:fine)').matches) {
-            // Device has a mouse
-            document.getElementById(project).classList.remove("hidden");
-            document.getElementById(project).classList.add("flex");
-        } else {
-            // Devise has no mouse
-            window.location.href = "/" + project;
-        }
-    }
-    function out(element) {
-        element.classList.add("hidden");
-        element.classList.remove("flex");
-    }
-
-</script>
 
 <!-- Home -->
-<div class="h-screen bg-gray-700 flex flex-col justify-around lg:justify-center items-center" id="home">
+<div class="h-screen bg-gray-700 flex flex-col justify-around lg:justify-center items-center home" id="home">
     <div class="flex flex-col justify-center items-center text-center px-10">
         <h1 class="text-5xl text-white">Kristian <span class="text-yellow-600">Møller
                 Schmidt</span>
         </h1>
 
-
-
-        
         <div class="flex flex-col sm:flex-row justify-center items-center">
             <div class="flex">
                 <a href="https://github.com/KristianMSchmidt" class="text-white m-1">
@@ -45,9 +25,9 @@
 </div>
 
 <!-- About -->
-<div id="about" class="mb-10 md:mb-0"></div>
+<div id="about" class="mb-10 md:mb-0 home"></div>
 <div
-    class="min-h-screen bg-white text-gray-800 px-8 sm:px-14 md:pr-20 lg:pl-20 lg:pr-10 xl:px-20  2xl:px-40 py-12 lg:flex">
+    class="min-h-screen bg-white text-gray-800 px-8 sm:px-14 md:pr-20 lg:pl-20 lg:pr-10 xl:px-20  2xl:px-40 py-12 lg:flex home" id="about-content">
     <div class="lg:w-3/12">
         <h1 class="text-4xl font-bold ">About me</h1>
         <h3>The short version</h3>
@@ -93,9 +73,9 @@
 </div>
 
 <!-- Skills-->
-<div id="skills" class="mb-10 md:mb-0">
+<div id="skills" class="mb-10 md:mb-0 home">
 </div>
-<div class="min-h-screen bg-gray-100 text-gray-900 px-8 sm:px-14 md:px-20 2xl:px-40 py-12">
+<div class="min-h-screen bg-gray-100 text-gray-900 px-8 sm:px-14 md:px-20 2xl:px-40 py-12 home">
     <h1 class="text-4xl font-bold pb-3 ">My skills</h1>
 
     <p> I build full stack web applications and backend algorithms using tools such as Python, Django, Flask,
@@ -114,8 +94,8 @@
 </div>
 
 <!-- Projects-->
-<div id="projects" class="mb-10 md:mb-0"></div>
-<div class="bg-white text-gray-800 px-8 sm:px-14 lg:px-20 2xl:px-40 pt-12 pb-20">
+<div id="projects" class="mb-10 md:mb-0 home"></div>
+<div class="bg-white text-gray-800 px-8 sm:px-14 lg:px-20 2xl:px-40 pt-12 pb-20 home">
     <h1 class="text-4xl font-bold">Projects</h1>
     
     <!-- Full stack webb applications -->
@@ -155,9 +135,18 @@
     </div>
 </div>
 
+<!-- Project Details -->
+{% include 'portfolio/project_details.html' with project=projects.bugtracker_php only %}
+{% include 'portfolio/project_details.html' with project=projects.portfolio only %}
+{% include 'portfolio/project_details.html' with project=projects.bugtracker_django only %}
+{% include 'portfolio/project_details.html' with project=projects.twentyfortyeight only %}
+{% include 'portfolio/project_details.html' with project=projects.eightpuzzle only %}
+{% include 'portfolio/project_details.html' with project=projects.sudoku only %}
+
+
 <!-- Contact -->
-<div class="mb-12" id="contact"></div>
-<div class="bg-gray-200 text-gray-900 px-8 sm:px-14 lg:px-20 2xl:px-40 py-12">
+<div class="mb-12 home" id="contact"></div>
+<div class="bg-gray-200 text-gray-900 px-8 sm:px-14 lg:px-20 2xl:px-40 py-12 home">
     <h1 class="text-4xl font-bold pb-1">Get in touch</h1>
     <p class="pb-10">Feel free to contact me anytime</p>
 
@@ -267,7 +256,8 @@
 
 <!-- Footer -->
 <!-- Icons are from HeroIcons.com-->
-<div class="flex flex-col lg:flex-row justify-around  bg-gray-800 text-white py-20">
+<div class="flex flex-col lg:flex-row justify-around  bg-gray-800 text-white py-20 home">
+ 
     <div class="flex flex-col items-center pb-6 lg:pb-0">
         <svg class="w-10 pb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -294,5 +284,6 @@
         <p>Engblommevej 39 1.th. <br class="sm:hidden"> 2400 Copenhagen </p>
     </div>
 </div>
+
 
 {% endblock content %}

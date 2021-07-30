@@ -9,7 +9,8 @@
         class="bg-gray-900 absolute w-full h-full hidden opacity-90 flex-col items-center justify-center"
         onmouseout="out(this)">
         <h4 class="text-white font-heavy pb-2">{{ project.title }}</h4>
-        <a href="{{ project.urlname }}" class="text-yellow-600 hover:text-yellow-400 focus:text-yellow-200">
-            More Info</a>
+        <p class="text-yellow-600 hover:text-yellow-400 focus:text-yellow-200 cursor-pointer" onclick="show_project('details_{{ project.urlname }}')">
+            More Info</p>
     </div>
 </div>
+
