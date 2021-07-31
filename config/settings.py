@@ -31,8 +31,8 @@ DEBUG = env.bool(
     "DEBUG", default=False
 )  # Will be false in production as no environment there
 
-# ALLOWED_HOSTS = [www.kristianms.com", "kristianms.com", ".herokuapp.com", "127.0.0.1"]
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["www.kristianms.com", "kristianms.com", ".herokuapp.com",
+                 ".kristianms.com", "kristianms.herokuapp.com", "https://kristianms.herokuapp.com"]
 
 # Application definition
 
