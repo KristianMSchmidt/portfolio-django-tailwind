@@ -149,7 +149,7 @@ EMAIL_HOST = env.str('MAILGUN_SMTP_SERVER', '')
 EMAIL_PORT = env.str('MAILGUN_SMTP_PORT', '')
 EMAIL_HOST_USER = env.str('MAILGUN_SMTP_LOGIN', '')
 EMAIL_HOST_PASSWORD = env.str('MAILGUN_SMTP_PASSWORD', '')
-
+EMAIL_USE_TLS = True
 
 # Redirect in production, but not in local development
 SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=True)
