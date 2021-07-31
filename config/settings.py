@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import os
 from pathlib import Path
 from environs import Env
 
@@ -146,16 +145,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 EMAIL_BACKEND = env.str(
     "EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend")
 
-EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER', '')
-EMAIL_PORT = os.environ.get('MAILGUN_SMTP_PORT', '')
-EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN', '')
-EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD', '')
+#DEFAULT_FROM_EMAIL = 'hey@kvyuc.dk'
+EMAIL_HOST = env.str('MAILGUN_SMTP_SERVER')
+EMAIL_PORT = env.int('MAILGUN_SMTP_PORT')
+EMAIL_HOST_USER = env.str('MAILGUN_SMTP_LOGIN')
+EMAIL_HOST_PASSWORD = env.str('MAILGUN_SMTP_PASSWORD')
+#EMAIL_USE_TLS = False (default)
 
-# EMAIL_HOST = env.str('MAILGUN_SMTP_SERVER', '')
-# EMAIL_PORT = env.str('MAILGUN_SMTP_PORT', '')
-# EMAIL_HOST_USER = env.str('MAILGUN_SMTP_LOGIN', '')
-# EMAIL_HOST_PASSWORD = env.str('MAILGUN_SMTP_PASSWORD', '')
-# EMAIL_USE_TLS = True
 
 # Redirect in production, but not in local development
 SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=True)
