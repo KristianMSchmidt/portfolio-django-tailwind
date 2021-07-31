@@ -31,8 +31,13 @@ DEBUG = env.bool(
     "DEBUG", default=False
 )  # Will be false in production as no environment there
 
-ALLOWED_HOSTS = ["www.kristianms.com", "kristianms.com", ".herokuapp.com",
-                 ".kristianms.com", "kristianms.herokuapp.com", "https://kristianms.herokuapp.com"]
+ALLOWED_HOSTS = ["www.kristianms.com",
+                 "kristianms.com",
+                 ".herokuapp.com",
+                 ".kristianms.com",
+                 "kristianms.herokuapp.com",
+                 "https://kristianms.herokuapp.com",
+                 '127.0.0.1']
 
 # Application definition
 
@@ -137,7 +142,14 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = env.str(
+    "EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend")
+
+EMAIL_HOST = env.str('MAILGUN_SMTP_SERVER', '')
+EMAIL_PORT = env.str('MAILGUN_SMTP_PORT', '')
+EMAIL_HOST_USER = env.str('MAILGUN_SMTP_LOGIN', '')
+EMAIL_HOST_PASSWORD = env.str('MAILGUN_SMTP_PASSWORD', '')
+
 
 # Redirect in production, but not in local development
 SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=True)
