@@ -92,7 +92,7 @@ context = {
             "bg_color": "bg-blue-100",
             "category": "Web Application (Single-page)",
             "project_id": "portfolio",
-            "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind-linode",
+            "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind-heroku",
             "external_url": "/",
             "stack": "Django, Python, JavaScript, Tailwind CSS, HTML",
             "deployment": "Heroku",
