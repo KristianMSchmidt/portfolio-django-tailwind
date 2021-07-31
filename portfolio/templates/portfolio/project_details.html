@@ -1,8 +1,8 @@
-<div class="w-full min-h-full align-middle justify-center py-6 px-3 mb-12 pt-12 hidden project_details" id="details_{{ project.urlname }}">
+<div class="w-full min-h-full align-middle justify-center py-6 px-3 mb-12 pt-12 hidden project_details" id="details_{{ project.project_id }}">
     
     <div class="text-gray-800 lg:py mt-10 px-6 sm:px-20 sm:mt-12 md:max-w-screen-lg">
         <h2 class="text-2xl font-bold mb-3"> {{ project.title }} </h2>
-        {% if project.urlname == 'bugtracker_django' %}
+        {% if project.project_id == 'bugtracker_django' %}
             <p class="bg-red-400 text-center text-lg mb-4 p-2 text-red-50">This project is currently under development</p>
         {% endif %}
         <p class="text-sm sm:text-base mb-4"> 
@@ -24,23 +24,30 @@
             <p class="text-sm lg:text-base">{{ project.deployment }}</p>
         </div>
         
-        <div class="flex flex-wrap">
-            {% if project.title != 'This Portfolio' %}
-            <a href="{{ project.external_url }}"
-                class="mt-5 mr-5 px-5 py-2 text-sm text-center text-blue-50 hover:text-blue-900 bg-blue-500 rounded-full hover:bg-blue-300 transition ease-in duration-300s focus:bg-blue-500 focus:text-blue-50">
-                Visit Project
-            </a>  
-            {% endif %}
-            <a href="{{ project.github_url }}"
-                class="mt-5 mr-5 px-5 py-2 text-sm text-center text-yellow-50 hover:text-yellow-900 bg-yellow-500 rounded-full hover:bg-yellow-300 transition ease-in duration-300s focus:bg-yellow-500 focus:text-yellow-50">
-                GitHub Repo
-            </a>
+        <div class="flex flex-wrap justify-between">
+            <div class="mt-5 flex">
+                {% if project.title != 'This Portfolio' %}
+                <a href="{{ project.external_url }}"
+                    class="mr-5 px-5 py-2 text-sm text-center text-blue-50 hover:text-blue-900 bg-blue-500 rounded-full hover:bg-blue-300 
+                    transition ease-in duration-300s focus:bg-blue-500 focus:text-blue-50">
+                    Visit Project
+                </a>  
             
-            <p class="mt-5 py-2 px-5 text-sm text-center whitespace-nowrap    border text-gray-700 hover:text-white border-gray-700
-                            bg-white hover:bg-gray-700 rounded-full transition ease-in duration-300 cursor-pointer" 
+                {% endif %}
+                <a href="{{ project.github_url }}"
+                    class="mr-5 px-5 py-2 text-sm text-center text-yellow-50
+                    hover:text-yellow-900 bg-yellow-500 rounded-full hover:bg-yellow-300 transition ease-in duration-300s
+                    focus:bg-yellow-500 focus:text-yellow-50">
+                    GitHub Repo
+                </a>
+            </div>
+            <a href="" class="mt-5 py-2 px-5 text-sm text-center whitespace-nowrap    border text-gray-700 hover:text-white border-gray-700
+                            bg-white hover:bg-gray-700 rounded-full transition ease-in duration-300 cursor-pointer
+                             focus:text-gray-700 focus:bg-white" 
                             onclick="nav_to('projects')">
                 Go Back
-            </p>  
+            </a>  
+        
         </div>
     </div>
 </div>

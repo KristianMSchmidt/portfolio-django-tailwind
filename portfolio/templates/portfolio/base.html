@@ -8,12 +8,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        {% tailwind_css %}
-        
+        {% tailwind_css %}      
         <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/114f0c3f98.js" crossorigin="anonymous"></script>
   
-
     </head>
 
     <body>
@@ -47,62 +45,58 @@
                         Contact
                     </p>
                 </div>
-            </nav>
-            <main class="flex-grow">{% block content %} {% endblock %}</main>
+            </nav><!-- end of nav bar -->
+            
+            <!-- page content -->
+            <main class="flex-grow">
+                {% block content %} {% endblock %}
+            </main>
 
         </div> <!-- end of page div -->
         
         <script>
             function nav_to(nav_id){
-                var home_elements = document.getElementsByClassName('home');
+                var main_elements = document.getElementsByClassName('main-content');
                 var project_details_elements = document.getElementsByClassName('project_details')
 
                 for (var i = 0; i < project_details_elements.length; i++) { 
                     project_details_elements[i].classList.add('hidden')
                 }
 
-                for (var i = 0; i < home_elements.length; i++) { 
-                    home_elements[i].classList.remove('hidden')
+                for (var i = 0; i < main_elements.length; i++) { 
+                    main_elements[i].classList.remove('hidden')
                 }
                 document.getElementById('about-content').classList.add('lg:flex')
-
                 document.getElementById(nav_id).scrollIntoView();
-
             }
     
-            function show_project(urlname){
-
-                var home_elements = document.getElementsByClassName('home');
+            function show_project_details(project_id){
+                var main_elements = document.getElementsByClassName('main-content');
                 document.getElementById('about-content').classList.remove('lg:flex')
-                for (var i = 0; i < home_elements.length; i++) { 
-                    home_elements[i].classList.add('hidden')
+                for (var i = 0; i < main_elements.length; i++) { 
+                    main_elements[i].classList.add('hidden')
                 }       
-
-                e = document.getElementById(urlname)
-                console.log(e)
-
+                e = document.getElementById("details_" + project_id)
                 e.classList.remove('hidden')
                 e.classList.add('flex')
-                console.log(e)
                 //location.href = "#project_details"
                 e.scrollIntoView();
             }
 
-            function over(project) {
+            function over(project_id) {
                 if (matchMedia('(pointer:fine)').matches) {
                     // Device has a mouse
-                    document.getElementById(project).classList.remove("hidden");
-                    document.getElementById(project).classList.add("flex");
+                    document.getElementById(project_id).classList.remove("hidden");
+                    document.getElementById(project_id).classList.add("flex");
                 } else {
                     // Devise has no mouse & users has finger-clicked the project div
-                    show_project("details_"+project);
+                    show_project_details(project_id);
                 }
             }
             function out(element) {
                 element.classList.add("hidden");
                 element.classList.remove("flex");
             }
-
        </script>
 
     </body>
