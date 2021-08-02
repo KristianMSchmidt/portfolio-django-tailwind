@@ -147,16 +147,11 @@ EMAIL_BACKEND = env.str(
     "EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend")
 
 #DEFAULT_FROM_EMAIL = 'kristianey@kvyuc.dk'
-# EMAIL_HOST = env.str('MAILGUN_SMTP_SERVER')
-# EMAIL_PORT = env.int('MAILGUN_SMTP_PORT')
-# EMAIL_HOST_USER = env.str('MAILGUN_SMTP_LOGIN')
-# EMAIL_HOST_PASSWORD = env.str('MAILGUN_SMTP_PASSWORD')
+EMAIL_HOST = env.str('MAILGUN_SMTP_SERVER')
+EMAIL_PORT = env.int('MAILGUN_SMTP_PORT')
+EMAIL_HOST_USER = env.str('MAILGUN_API_KEY')
+EMAIL_HOST_PASSWORD = env.str('MAILGUN_SMTP_PASSWORD')
 # EMAIL_USE_TLS = True  # Default is false (default)
-
-EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER', '')
-EMAIL_PORT = os.environ.get('MAILGUN_SMTP_PORT', '')
-EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN', '')
-EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD', '')
 
 # Redirect in production, but not in local development
 SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=True)
