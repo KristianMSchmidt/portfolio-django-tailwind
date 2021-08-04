@@ -97,9 +97,10 @@ context = {
             "stack": "Django, Python, JavaScript, Tailwind CSS, HTML",
             "deployment": "Heroku",
             "description": (
-                "I've used Django in this project to include re-usable components and to set up the email backend. "
+                "Though this website is mostly static, I've used Django on the backend to include re-usable "
+                "components and to set up the email backend. "
                 "The portfolio is built as a single-page application using Javascript. "
-                "I've made the styling and reponsive layout using Tailwind CSS. "
+                "I've made the styling and responsive layout using Tailwind CSS. "
             ),
         },
         "bugtracker_django": {

@@ -1002,11 +1002,6 @@ select {
   border-color: rgba(55, 65, 81, var(--tw-border-opacity));
 }
 
-.border-yellow-600 {
-  --tw-border-opacity: 1;
-  border-color: rgba(217, 119, 6, var(--tw-border-opacity));
-}
-
 .bg-red-200 {
   --tw-bg-opacity: 1;
   background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
@@ -1090,11 +1085,6 @@ select {
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -1263,14 +1253,14 @@ select {
   line-height: 1.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1361,11 +1351,6 @@ select {
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 
-.text-green-50 {
-  --tw-text-opacity: 1;
-  color: rgba(236, 253, 245, var(--tw-text-opacity));
-}
-
 .opacity-90 {
   opacity: 0.9;
 }
@@ -1391,11 +1376,6 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-.hover\:border-yellow-700:hover {
-  --tw-border-opacity: 1;
-  border-color: rgba(180, 83, 9, var(--tw-border-opacity));
-}
-
 .hover\:bg-yellow-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(252, 211, 77, var(--tw-bg-opacity));
@@ -1409,31 +1389,6 @@ select {
 .hover\:bg-blue-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(147, 197, 253, var(--tw-bg-opacity));
-}
-
-.hover\:bg-yellow-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 251, 235, var(--tw-bg-opacity));
-}
-
-.hover\:bg-yellow-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(254, 243, 199, var(--tw-bg-opacity));
-}
-
-.hover\:bg-green-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
 
 .hover\:text-yellow-500:hover {
@@ -1461,21 +1416,6 @@ select {
   color: rgba(30, 58, 138, var(--tw-text-opacity));
 }
 
-.hover\:text-yellow-600:hover {
-  --tw-text-opacity: 1;
-  color: rgba(217, 119, 6, var(--tw-text-opacity));
-}
-
-.hover\:text-green-900:hover {
-  --tw-text-opacity: 1;
-  color: rgba(6, 78, 59, var(--tw-text-opacity));
-}
-
-.hover\:text-yellow-700:hover {
-  --tw-text-opacity: 1;
-  color: rgba(180, 83, 9, var(--tw-text-opacity));
-}
-
 .focus\:bg-blue-500:focus {
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
@@ -1484,26 +1424,6 @@ select {
 .focus\:bg-yellow-500:focus {
   --tw-bg-opacity: 1;
   background-color: rgba(245, 158, 11, var(--tw-bg-opacity));
-}
-
-.focus\:bg-green-500:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
-}
-
-.focus\:bg-yellow-100:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgba(254, 243, 199, var(--tw-bg-opacity));
-}
-
-.focus\:bg-yellow-200:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgba(253, 230, 138, var(--tw-bg-opacity));
-}
-
-.focus\:bg-gray-700:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
 .focus\:bg-white:focus {
@@ -1531,16 +1451,6 @@ select {
   color: rgba(255, 251, 235, var(--tw-text-opacity));
 }
 
-.focus\:text-green-50:focus {
-  --tw-text-opacity: 1;
-  color: rgba(236, 253, 245, var(--tw-text-opacity));
-}
-
-.focus\:text-yellow-800:focus {
-  --tw-text-opacity: 1;
-  color: rgba(146, 64, 14, var(--tw-text-opacity));
-}
-
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-text-opacity));
@@ -1560,11 +1470,6 @@ select {
 .focus\:ring-yellow-900:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(120, 53, 15, var(--tw-ring-opacity));
-}
-
-.focus\:hover\:bg-gray-700:focus:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
@@ -1636,11 +1541,6 @@ select {
 
   .md\:pr-20 {
     padding-right: 5rem;
-  }
-
-  .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:text-lg {
