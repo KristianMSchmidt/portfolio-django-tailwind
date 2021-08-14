@@ -116,10 +116,10 @@ context = {
             "description": (
                 "This is a ticket tracking system that could be used by e.g. a sofware company to keep track of "
                 "reported bugs and issues related to their software. The program features authorization and authentication, "
-                "multi-role demo-login and an automated notification system. I've built this project from scratch, "
+                "multi-role demo-login and an automated notification system. I am building this project from scratch, "
                 "including relational database design and a responsive front end. "
                 "The back end is built with Django and Python. The front end is built with "
-                "vanilla HTML, htmx, CSS, Bootstrap and JavaScript. The implementation features throughout unit testing, pagination, CRUD-operations, a postgresql database with "
+                "vanilla HTML, htmx, CSS, Bootstrap and JavaScript. When the implementation is done, it will feature throughout unit testing, pagination, CRUD-operations, a postgresql database with "
                 "One-One, One-To-Many and Many-To-Many relations, password reset via email, search functionality and much more. "
                 "If you only visit once, I recommend that you log in as 'Demo Admin'."
             ),
