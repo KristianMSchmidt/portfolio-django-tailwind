@@ -106,7 +106,7 @@ context = {
         "bugtracker_django": {
             "title": "Bug Tracker - Django",
             "subtitle": "A ticket tracking system",
-            "bg_color": "bg-pink-200",
+            "bg_color": "bg-pink-100",
             "category": "Web Application",
             "project_id": "bugtracker_django",
             "github_url": "https://github.com/KristianMSchmidt/django-bugtracker",
