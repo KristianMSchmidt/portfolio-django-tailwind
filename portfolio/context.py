@@ -111,7 +111,7 @@ context = {
             "project_id": "bugtracker_django",
             "github_url": "https://github.com/KristianMSchmidt/django-bugtracker",
             "external_url": "https://django-bugtracker.herokuapp.com/",
-            "stack": "Django, Python, JavaScript, HTML, Bootstrap, htmx, Docker",
+            "stack": "Django, Python, JavaScript, HTML, Bootstrap, htmx, Docker, FactoryBoy",
             "deployment": "Heroku (Docker)",
             "description": (
                 "This is a ticket tracking system that could be used by e.g. a sofware company to keep track of "
@@ -120,7 +120,7 @@ context = {
                 "including relational database design and a responsive front end. "
                 "The back end is built with Django and Python. The front end is built with "
                 "vanilla HTML, htmx, CSS, Bootstrap and JavaScript. When the implementation is done, it will feature throughout unit testing, pagination, CRUD-operations, a postgresql database with "
-                "One-One, One-To-Many and Many-To-Many relations, password reset via email, search functionality and much more. "
+                "One-To-Many and Many-To-Many relations, password reset via email, search functionality and much more. "
                 "If you only visit once, I recommend that you log in as 'Demo Admin'."
             ),
         },
