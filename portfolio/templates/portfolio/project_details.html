@@ -3,7 +3,8 @@
     <div class="text-gray-800 lg:py mt-10 px-6 sm:px-20 sm:mt-12 md:max-w-screen-lg">
         <h2 class="text-2xl font-bold mb-3"> {{ project.title }} </h2>
         {% if project.project_id == 'bugtracker_django' %}
-            <p class="bg-red-400 text-center text-lg mb-4 p-2 text-red-50">This project is still under development - not all featured are implemented yet.</p>
+            <p class="bg-red-400 text-center text-lg mb-4 p-2 text-red-50">The UI of this project is only partially implemented. To try
+            a more developed Bug Tracker, please visit the one I've built with PHP.</p>
         {% endif %}
         <p class="text-sm sm:text-base mb-4"> 
             {{ project.description }}
