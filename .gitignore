@@ -1,6 +1,5 @@
 __pycache__/
-scp.sh
 noter.txt
-.env
 db.sqlite3
-pipelines.txt
+/static/
+.env.prod

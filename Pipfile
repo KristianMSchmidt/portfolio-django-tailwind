@@ -5,11 +5,9 @@ name = "pypi"
 
 [packages]
 django = "~=3.1.0"
-django-tailwind = "*"
-environs = {version = "==8.0.0", extras = ["django"]}
-whitenoise = "==5.1.0"
-gunicorn = "==19.9.0"
 psycopg2-binary = "~=2.8.5"
+django-tailwind = "*"
+gunicorn = "==19.9.0"
 autopep8 = "*"
 
 [dev-packages]
@@ -17,5 +15,3 @@ autopep8 = "*"
 [requires]
 python_version = "3.9"
 
-[pipenv]
-allow_prereleases = true
