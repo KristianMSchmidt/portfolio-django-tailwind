@@ -42,5 +42,5 @@ volumes:
   static_volume: {}
 
 networks:
-  reverseproxy_proxynet:
-    external: true
+  reverse-proxy_proxynet
+      external: true
