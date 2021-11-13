@@ -1,5 +1,4 @@
 __pycache__/
 noter.txt
 db.sqlite3
-static
 .env.prod
