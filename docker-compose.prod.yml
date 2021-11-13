@@ -19,22 +19,22 @@ services:
   nginx:
     restart: always
     image: nginx:latest
-    hostname: bug-tracker-django.kristianms.com
+    hostname: portfolio.kristianms.com
     volumes:
       - static_volume:/code/static
       - type: bind
         source: ./nginx_config/nginx.conf
         target: /etc/nginx/conf.d/default.conf
     expose:
-      - 1347
+      - 1337
     depends_on:
       - web
     environment:
-      - VIRTUAL_HOST=kristianms.com
-      - VIRTUAL_PORT=1347
-      - LETSENCRYPT_HOST=kristianms.com
+      - VIRTUAL_HOST=portfolio.kristianms.com
+      - VIRTUAL_PORT=1337
+      - LETSENCRYPT_HOST=portfolio.kristianms.com
       - LETSENCRYPT_EMAIL=kmollerschmidt@gmail.com
-      - url=https://kristianms.com
+      - url=https://portfolio.kristianms.com
     networks:
       - reverse-proxy_proxynet
  

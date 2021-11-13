@@ -43,6 +43,6 @@ production_djangologs: ## Show django logs
 production_accesslogs: ## Show nginx access logs
 	docker logs kristianmscom_nginx_1
 
-production_shell: # Open shell in running docker production container
-	docker-compose -f docker-compose.prod.yml exec web /bin/bash
+production_shell: ## Open shell in running docker production container
+	docker-compose -f docker-compose.prod.yml run web /bin/bash
 

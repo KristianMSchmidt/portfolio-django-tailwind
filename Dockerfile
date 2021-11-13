@@ -1,6 +1,8 @@
 # Pull base image
 FROM nikolaik/python-nodejs:latest
 
+RUN npm install nodemon --save-dev
+
 # prevent Python from buffering stdin/stdout
 ENV PYTHONUNBUFFERED=1
 
