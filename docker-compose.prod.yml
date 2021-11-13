@@ -43,4 +43,4 @@ volumes:
 
 networks:
   reverse-proxy_proxynet
-      external: true
+    external: true
