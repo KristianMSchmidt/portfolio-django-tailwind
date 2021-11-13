@@ -7,8 +7,6 @@ services:
     command: /bin/sh -c /code/entrypoint.prod.sh
     volumes:
       - static_volume:/code/static
-    volumes:
-      - .:/code
     expose:
       - 8000
     env_file:
@@ -19,7 +17,7 @@ services:
   nginx:
     restart: always
     image: nginx:latest
-    hostname: portfolio.kristianms.com
+    hostname: kristianms.com
     volumes:
       - static_volume:/code/static
       - type: bind
@@ -30,11 +28,11 @@ services:
     depends_on:
       - web
     environment:
-      - VIRTUAL_HOST=portfolio.kristianms.com
+      - VIRTUAL_HOST=kristianms.com
       - VIRTUAL_PORT=1337
-      - LETSENCRYPT_HOST=portfolio.kristianms.com
+      - LETSENCRYPT_HOST=kristianms.com
       - LETSENCRYPT_EMAIL=kmollerschmidt@gmail.com
-      - url=https://portfolio.kristianms.com
+      - url=https://kristianms.com
     networks:
       - reverse-proxy_proxynet
  

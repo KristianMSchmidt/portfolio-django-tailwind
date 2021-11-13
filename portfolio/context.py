@@ -73,8 +73,8 @@ context = {
             "project_id": "bugtracker_php",
             "github_url": "https://github.com/KristianMSchmidt/bug_tracker",
             "external_url": "https://bug-tracker-php.kristianms.com",
-            "stack": "PHP, SQL, JavaScript, CSS, Sass, HTML",
-            "deployment": "Hostinger",
+            "stack": "PHP, SQL, Docker, JavaScript, CSS, Sass, HTML",
+            "deployment": "The site runs in a Docker container behind a reverse proxy on my server",
             "description": (
                 "This is a ticket tracking system that could be used by e.g. a sofware company to "
                 "keep track of reported bugs and issues related to their software. The program features "
@@ -94,8 +94,8 @@ context = {
             "project_id": "portfolio",
             "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind",
             "external_url": "/",
-            "stack": "Django, Python, JavaScript, Tailwind CSS, HTML",
-            "deployment": "Heroku",
+            "stack": "Django, Python, Nginx, Docker, JavaScript, Tailwind CSS, HTML",
+            "deployment": "The site runs in a Docker container behind a reverse proxy on my server",
             "description": (
                 "Though this website is mostly static, I've used Django on the backend to include re-usable "
                 "components and to set up the email backend. "
@@ -112,7 +112,7 @@ context = {
             "github_url": "https://github.com/KristianMSchmidt/django-bugtracker",
             "external_url": "https://bug-tracker-django.kristianms.com/",
             "stack": "Django, Python, JavaScript, HTML, Bootstrap, htmx, Docker, FactoryBoy",
-            "deployment": "Heroku (Docker)",
+            "deployment": "The site runs in a Docker container behind a reverse proxy on my server",
             "description": (
                 "This is a ticket tracking system that could be used by e.g. a sofware company to keep track of "
                 "reported bugs and issues related to their software. The program features authorization and authentication, "
@@ -132,8 +132,8 @@ context = {
             "project_id": "twentyfortyeight",
             "github_url": "https://github.com/KristianMSchmidt/2048-game-",
             "external_url": "https://twentyfortyeight.kristianms.com",
-            "stack": "Python, Flask, Html, JavaScript, CSS, SCSS",
-            "deployment": "PythonAnywhere (PaaS)",
+            "stack": "Python, Flask, Docker, Html, JavaScript, CSS, SCSS",
+            "deployment": "The site runs in a Docker container behind a reverse proxy on my server",
             "description": (
                 "Web app with an AI-player for the 2048-game. "
                 "The AI-player uses minimax-search with pruning. "
@@ -154,7 +154,7 @@ context = {
             "github_url": "https://github.com/KristianMSchmidt/flask-8-puzzle",
             "external_url": "https://puzzle.kristianms.com",
             "stack": "Python, Flask, Html, Javascript, CSS, SCSS",
-            "deployment": "PythonAnywhere (PaaS)",
+            "deployment": "The site runs in a Docker container behind a reverse proxy on my server",
             "description": (
                 "On this web app, you can construct and play with classic 8-puzzles (and more complicated 15-puzzles). "
                 "You can either try to solve the puzzles yourself or let an AI agent do the hard work. "
@@ -175,7 +175,7 @@ context = {
             "github_url": "https://github.com/KristianMSchmidt/Sudoku-solver-Flask-web-app-",
             "external_url": "https://sudoku.kristianms.com",
             "stack": "Python, Flask, HTML, JavaScript, CSS, SCSS",
-            "deployment": "PythonAnywhere (PaaS)",
+            "deployment": "The site runs in a Docker container behind a reverse proxy on my server",
             "description": (
                 "This is a speed optimized automatic sudoku solver using Back Tracking Search (BTS) and an Arc Consistency Algorithm (AC-3). "
                 "I originally made the python backend of this project as an assignment for Columbia University's "
