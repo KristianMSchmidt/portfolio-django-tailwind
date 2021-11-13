@@ -72,7 +72,7 @@ context = {
             "category": "Web Application",
             "project_id": "bugtracker_php",
             "github_url": "https://github.com/KristianMSchmidt/bug_tracker",
-            "external_url": "https://www.kristianmschmidt.com/bugtracker/view/pages/demo_login.php",
+            "external_url": "https://bug-tracker-php.kristianms.com",
             "stack": "PHP, SQL, JavaScript, CSS, Sass, HTML",
             "deployment": "Hostinger",
             "description": (
@@ -92,7 +92,7 @@ context = {
             "bg_color": "bg-blue-100",
             "category": "Web Application (Single-page)",
             "project_id": "portfolio",
-            "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind-heroku",
+            "github_url": "https://github.com/KristianMSchmidt/portfolio-django-tailwind",
             "external_url": "/",
             "stack": "Django, Python, JavaScript, Tailwind CSS, HTML",
             "deployment": "Heroku",
@@ -110,7 +110,7 @@ context = {
             "category": "Web Application",
             "project_id": "bugtracker_django",
             "github_url": "https://github.com/KristianMSchmidt/django-bugtracker",
-            "external_url": "https://django-bugtracker.herokuapp.com/",
+            "external_url": "https://bug-tracker-django.kristianms.com/",
             "stack": "Django, Python, JavaScript, HTML, Bootstrap, htmx, Docker, FactoryBoy",
             "deployment": "Heroku (Docker)",
             "description": (
@@ -131,7 +131,7 @@ context = {
             "category": "Web Application",
             "project_id": "twentyfortyeight",
             "github_url": "https://github.com/KristianMSchmidt/2048-game-",
-            "external_url": "https://kristianmschmidt.pythonanywhere.com/twentyfortyeight",
+            "external_url": "https://twentyfortyeight.kristianms.com",
             "stack": "Python, Flask, Html, JavaScript, CSS, SCSS",
             "deployment": "PythonAnywhere (PaaS)",
             "description": (
@@ -152,7 +152,7 @@ context = {
             "category": "Web Application",
             "project_id": "eightpuzzle",
             "github_url": "https://github.com/KristianMSchmidt/flask-8-puzzle",
-            "external_url": "https://kristianmschmidt.pythonanywhere.com/puzzle",
+            "external_url": "https://puzzle.kristianms.com",
             "stack": "Python, Flask, Html, Javascript, CSS, SCSS",
             "deployment": "PythonAnywhere (PaaS)",
             "description": (
@@ -173,7 +173,7 @@ context = {
             "category": "Web Application",
             "project_id": "sudoku",
             "github_url": "https://github.com/KristianMSchmidt/Sudoku-solver-Flask-web-app-",
-            "external_url": "https://kristianmschmidt.pythonanywhere.com/sudoku",
+            "external_url": "https://sudoku.kristianms.com",
             "stack": "Python, Flask, HTML, JavaScript, CSS, SCSS",
             "deployment": "PythonAnywhere (PaaS)",
             "description": (
