@@ -152,8 +152,8 @@
     <p class="pb-10">Feel free to contact me anytime</p>
 
     <!-- Show potential message -->
-
-    {% if email_status == 'success' %}
+    
+    {% comment %} {% if email_status == 'success' %}
         <div class="bg-green-200 text-green-800 px-4 py-2 mb-5">
             Your message was send. I'll reply as soon as possible. 
         </div>
@@ -161,8 +161,16 @@
         <div class="bg-red-200 text-red-800 px-4 py-2 mb-5">
             Your message was not send. Try again or send a regular email to the address shown below.
         </div>
+    {% endif %} {% endcomment %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == "success" %}
+                <div class="bg-green-200 text-green-800 px-4 py-2 mb-5">{{ message }}</div>
+            {% elif message.tags == "error" %}
+                <div class="bg-red-200 text-red-800 px-4 py-2 mb-5">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
     {% endif %}
-
 
     <!-- Customized form -->
     <!-- {{ form }} eller crispy forms ville selvfølgelig være hurtigere -->
