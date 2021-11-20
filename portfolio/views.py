@@ -16,14 +16,14 @@ def home_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
 
-            # name = form.cleaned_data['name']
-            # sender = form.cleaned_data['sender']
-            # subject = form.cleaned_data['subject']
-            # message = form.cleaned_data['message']
-            # recipients = ['kmollerschmidt@gmail.com', 'krms@kvuc.dk']
-            # full_message = f"Portfolio message from {name} with email {sender}: {message}"
-            # Mail.objects.create(name=name, sender=sender,
-            #                     subject=subject, message=message)
+            name = form.cleaned_data['name']
+            sender = form.cleaned_data['sender']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            recipients = ['kmollerschmidt@gmail.com', 'krms@kvuc.dk']
+            full_message = f"Portfolio message from {name} with email {sender}: {message}"
+            Mail.objects.create(name=name, sender=sender,
+                                subject=subject, message=message)
             # try:
             #     send_mail(subject, full_message, sender,
             #               recipients, fail_silently=False)
