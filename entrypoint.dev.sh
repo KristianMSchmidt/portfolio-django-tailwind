@@ -2,7 +2,7 @@
 
 set -e
 
-echo "${0}: installing npm packages necessary to build tailwind css."
+echo "${0}: installing npm packages necessary to build tailwind css (only needed in development)."
 python manage.py tailwind install
 
 

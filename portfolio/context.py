@@ -25,16 +25,16 @@ context = {
         "php": {
             "title": "PHP development",
             "description": (
-                "Before learning Django, I made full-stack web applications in the LAMP stack (Linux, Apache, MySql and PHP). "
-                "For an example, see my Bugtracker project below"
+                "Before learning Django, I made full-stack web applications with PHP, MySql and Apache. "
+                "For an example, see my PHP bugtracker project below."
             ),
             "img": {"width": "200", "url": "img/php-logo-vector.svg"},
         },
         "frontend": {
             "title": "Front end development",
             "description": (
-                "I use HTML, CSS, Javascript and Bootstrap to build responsive websites. I also use CSS preprocessors such as Sass. "
-                "You'll see examples of my front end skills in all my projects in the projects section."
+                "Besides HTML, Javascript and CSS, I use tools and frameworks such as Bootstrap, AJAX and HTMX to build responsive and dynamic websites."
+                " You'll see examples of my front end skills in all my projects in the projects section."
             ),
             "img": {"width": "120", "url": "img/csshtmljs.jpeg"},
         },
@@ -55,13 +55,21 @@ context = {
             "img": {"width": "160", "url": "img/tailwind-css-logo.svg"},
         },
         "numpy": {
-            "title": "Scientific computing",
+            "title": "Data science and Machine Learning",
             "description": (
-                "I have written thousands of lines of code in scientific Python libraries such as Numpy, "
+                "I'm very interested in Machine Learning and data science. I've written thousands of lines of code in Python data science libraries such as Numpy, "
                 "Matplotlib, Pandas, Tensorplow and Pytorch. These projects are from before I started "
                 "doing web development, so you won't find live applications here. But the code is available on GitHub."
             ),
             "img": {"width": "200", "url": "img/numpy.png"},
+        },
+        "docker": {
+            "title": "Docker",
+            "description": (
+                "I use Docker in all of my web projects - both at work and when doing side projects. For example, this portfolio, as well as all the projects in the"
+                " section below, run in separate docker containers behind a reverse proxy on my server."
+            ),
+            "img": {"width": "180", "url": "img/docker.png"},
         },
     },
     "projects": {
