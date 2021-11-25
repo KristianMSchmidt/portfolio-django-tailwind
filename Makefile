@@ -22,7 +22,7 @@ tailwind-start:  ## start tailwind (should be running while developing)
 	docker-compose -f docker-compose.dev.yml exec web python manage.py tailwind start
 
 tailwind-build: ## build minified production tailwind css
-	docker-compose -f docker-compose.dev.yml exec web python manage.py tailwind start
+	docker-compose -f docker-compose.dev.yml exec web python manage.py tailwind build
 
 
 # ---------- Checks and tests ---------- #

@@ -33,7 +33,7 @@ context = {
         "frontend": {
             "title": "Front end development",
             "description": (
-                "I use HTML, CSS, Javascript and Bootstrap to build responsive websites. I also use CSS prepocessors such as Sass. "
+                "I use HTML, CSS, Javascript and Bootstrap to build responsive websites. I also use CSS preprocessors such as Sass. "
                 "You'll see examples of my front end skills in all my projects in the projects section."
             ),
             "img": {"width": "120", "url": "img/csshtmljs.jpeg"},
