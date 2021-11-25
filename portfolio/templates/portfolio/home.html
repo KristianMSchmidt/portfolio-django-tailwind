@@ -73,16 +73,16 @@
     </div>
 </div>
 
-<!-- Skills-->
+<!-- Stack-->
 <div id="skills" class="mb-10 md:mb-0 main-content">
 </div>
 <div class="min-h-screen bg-gray-100 text-gray-900 px-8 sm:px-14 md:px-20 2xl:px-40 py-12 main-content">
     <h1 class="text-4xl font-bold pb-3 ">My skills</h1>
-
     <p> I build full stack web applications and backend algorithms using tools such as Python, Django, Flask,
-        PHP, SQL, Javascript, HTML, CSS, Sass, Bootstrap, Tailwind CSS and Docker. Below, I
+        PHP, SQL, Javascript, HTML, HTMX, CSS, Sass, Bootstrap, Tailwind CSS and Docker. Below, I
         hightlight my key technical skills that I will bring to your project.
     </p>
+
     <div class="mt-8 grid lg:grid-cols-2 xl:grid-cols-3 gap-10">
         {% include 'portfolio/skill.html' with skill=skills.python only %}
         {% include 'portfolio/skill.html' with skill=skills.django only %}
@@ -91,6 +91,8 @@
         {% include 'portfolio/skill.html' with skill=skills.database only %}
         {% include 'portfolio/skill.html' with skill=skills.tailwind only %}
         {% include 'portfolio/skill.html' with skill=skills.numpy only %}
+        {% include 'portfolio/skill.html' with skill=skills.docker only %}
+
     </div>
 </div>
 
