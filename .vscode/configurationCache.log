@@ -1,0 +1,1 @@
+{"buildTargets":["build","develop","help","make","production_accesslogs","production_djangologs","production_shell","production_start","production_stop","shell","tailwind-build","tailwind-start","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

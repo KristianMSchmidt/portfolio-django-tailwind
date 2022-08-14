@@ -59,9 +59,11 @@
         
         <script>
             function nav_to(nav_id){
+                console.log("heh fra nav_to", nav_id)
                 var main_elements = document.getElementsByClassName('main-content');
                 var project_details_elements = document.getElementsByClassName('project_details')
-
+                console.log("main_elements", main_elements)
+                console.log("project_details_elements", project_details_elements)
                 for (var i = 0; i < project_details_elements.length; i++) { 
                     project_details_elements[i].classList.add('hidden')
                 }
@@ -72,8 +74,15 @@
                 document.getElementById('about-content').classList.add('lg:flex')
                 document.getElementById(nav_id).scrollIntoView();
                 //location.href = "#projects";
+                const state = { 'nav_id': nav_id}
+                window.history.pushState(document.state, document.title, '/' + nav_id);
+
             }
-    
+            nav_id = "{{ nav_id }}"
+            if(nav_id){
+             nav_to(nav_id)   
+            }
+                
             function show_project_details(project_id){
                 var main_elements = document.getElementsByClassName('main-content');
                 document.getElementById('about-content').classList.remove('lg:flex')
@@ -101,6 +110,14 @@
                 element.classList.add("hidden");
                 element.classList.remove("flex");
             }
+
+            window.addEventListener('popstate', function (event) {
+                nav_id = queryString = window.location.href.split('/')[3]
+                console.log(nav_id);
+                document.getElementById(nav_id).scrollIntoView();
+                
+                //nav_to(nav_id)   
+            });
        </script>
 
     </body>

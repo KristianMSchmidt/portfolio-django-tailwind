@@ -9,7 +9,7 @@ from .models import Mail
 from django.contrib import messages
 
 
-def home_view(request):
+def home_view(request, nav_id=""):
 
     context = ctx
     if request.method == 'POST':
@@ -39,5 +39,5 @@ def home_view(request):
         form = ContactForm()
 
     context['form'] = form
-
+    context['nav_id'] = nav_id
     return render(request, 'portfolio/home.html', context)
